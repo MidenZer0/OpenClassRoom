@@ -8,10 +8,11 @@ function countdown() {
   const minutes = Math.floor((diff / 60) % 60);
   const seconds = Math.floor(diff % 60);
 
-  setInterval(countdown, 1000);
+  
 
   document.getElementById("time").innerText =
     `${days}j ${hours} : ${minutes} : ${seconds}`
 }
 
 countdown();
+setInterval(countdown, 1000);
