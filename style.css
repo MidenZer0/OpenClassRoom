@@ -27,7 +27,7 @@ fixed repeating-linear-gradient(rgba(193, 193, 193, 0.25), rgb(193, 193, 193, 0.
 fixed repeating-linear-gradient(0.25turn ,rgb(193, 193, 193, 0.25), rgb(193, 193, 193, 0.25) 1px, transparent 1px, transparent 40px), black;
 width: 100dvw;
 height: 100dvh;
-overflow: auto;
+overflow: hidden;
 }
 
 .active {
@@ -61,11 +61,11 @@ ul {
 li {
 padding: 1em 2em;
 font-size: clamp(0.8em, 1.2vw, 2em);
+transition: 0.25s ease-in-out;
 }
 
 li:hover:not(.active){
 	transform: scale(1.1);
-	transition: 0.5s ease-in-out;
 }
 
 li:nth-child(1) {
@@ -126,11 +126,12 @@ footer p {
 	justify-content: center;
 	align-items: center;
 	box-shadow: 15px 15px 0px yellow;
+	overflow: auto;
 }
 
 #aboutme p {
 	font-size: clamp(1em, 1.5vw, 2.5em);
-	line-height: 1.8;
+	line-height: 1.5;
 	padding: min(3em, 5%);
 	color: black;
 
@@ -173,7 +174,6 @@ footer p {
 	justify-content: center;
 	align-items: center;
 	gap: 1.5rem;
-	z-index: 5;
 }
  
 .icon {
@@ -187,11 +187,11 @@ footer p {
   border-radius: 50% ;
 	overflow: visible;
 	box-shadow: 3px 3px 1px yellow, 2px 5px 1px rgb(255, 0, 0), 5px 2px 1px rgb(0, 89, 255);
+	transition: 0.25s ease-in-out;
 }
 
 .icon:hover {
 	transform: scale(1.1);
-	transition: 0.25s ease-in-out;
 }
 
 .icon:nth-child(-n+3) img {
@@ -204,5 +204,4 @@ footer p {
 }
 
 .icon:nth-child(4) img, .icon:nth-child(2) img {
-	width: clamp(4.5rem, 4.5vw, 7.2rem);
-}
+	width: 4.5rem;
